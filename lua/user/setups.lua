@@ -1,5 +1,8 @@
+-- ref: https://github.com/keaising/dotfile/blob/master/nvim/.config/nvim/lua/user/setups.lua
 local plugin_list = {
-  im_select = {},
+  im_select = {
+    disable_auto_restore = 1,
+  },
 }
 
 for p, opt in pairs(plugin_list) do
