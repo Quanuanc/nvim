@@ -41,6 +41,8 @@ packer.init({
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
+	use("windwp/nvim-autopairs")
+  use("numToStr/Comment.nvim")
 	use("folke/tokyonight.nvim")
 
 	use("keaising/im-select.nvim")
@@ -74,6 +76,10 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
