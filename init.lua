@@ -9,6 +9,7 @@ require("user.treesitter")
 require("user.autopairs")
 require("user.comment")
 require("user.gitsigns")
+require("user.toggleterm")
 
 require("user.setups")
 require("user.nvim-tree")
