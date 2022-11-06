@@ -41,11 +41,11 @@ packer.init({
 return packer.startup(function(use)
   use  "wbthomason/packer.nvim"  -- Have packer manage itself
   use  "nvim-lua/plenary.nvim"   -- Useful lua functions used by lots of plugins
-  use  "folke/tokyonight.nvim" 
+  use  "folke/tokyonight.nvim"
 
-  use  "keaising/im-select.nvim" 
-  use  "nvim-tree/nvim-tree.lua" 
-  use  "nvim-tree/nvim-web-devicons" 
+  use  "keaising/im-select.nvim"
+  use  "nvim-tree/nvim-tree.lua"
+  use  "nvim-tree/nvim-web-devicons"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -67,8 +67,6 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
 
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
   	require("packer").sync()
   end
