@@ -38,6 +38,9 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 
+-- Git
+keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
+
 -- System clipboard
 keymap("n", "<leader>y", '"+y', opts)
 keymap("v", "<leader>y", '"+y', opts)
