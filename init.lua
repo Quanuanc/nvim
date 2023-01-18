@@ -10,6 +10,6 @@ require("user.autopairs")
 require("user.comment")
 require("user.gitsigns")
 require("user.toggleterm")
-
+require("user.leap")
 require("user.setups")
 require("user.nvim-tree")
