@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 	use("akinsho/toggleterm.nvim")
 	use("lewis6991/impatient.nvim")
+	use("mfussenegger/nvim-jdtls")
 
 	use("folke/tokyonight.nvim")
 
