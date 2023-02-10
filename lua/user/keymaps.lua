@@ -41,8 +41,3 @@ keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
 
--- System clipboard
-keymap("n", "<leader>y", '"+y', opts)
-keymap("v", "<leader>y", '"+y', opts)
-keymap("n", "<leader>p", '"+p', opts)
-keymap("v", "<leader>p", '"+p', opts)
