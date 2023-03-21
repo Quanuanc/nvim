@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 	use("lewis6991/impatient.nvim")
 
-	use("folke/tokyonight.nvim")
+  use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 
 	use("ggandor/leap.nvim")
 
