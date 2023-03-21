@@ -50,7 +50,6 @@ return packer.startup(function(use)
 
 	use("folke/tokyonight.nvim")
 
-	use("keaising/im-select.nvim")
 	use("ggandor/leap.nvim")
 
 	-- cmp plugins
