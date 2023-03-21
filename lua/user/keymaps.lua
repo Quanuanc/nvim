@@ -32,7 +32,7 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- NeooTree
-keymap("n", "<leader>e", ":Neotree<cr>", opts)
+keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)

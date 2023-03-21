@@ -13,8 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {"briones-gabriel/darcula-solid.nvim", dependencies = { "rktjmp/lush.nvim" }},
-  {
-  "nvim-neo-tree/neo-tree.nvim",
+  { "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     dependencies = { 
       "nvim-lua/plenary.nvim",
@@ -26,4 +25,5 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
   "ggandor/leap.nvim",
   {'akinsho/toggleterm.nvim', version = "*", config = true},
+  {'nvim-treesitter/nvim-treesitter', build = ":TSUpdate"},
 })
