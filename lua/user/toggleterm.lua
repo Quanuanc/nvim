@@ -5,6 +5,5 @@ end
 
 toggleterm.setup({
 	open_mapping = [[<c-\>]],
-	direction = "float",
 	shell = vim.fn.has("win32") == 1 and "powershell" or vim.o.shell,
 })

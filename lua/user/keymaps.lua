@@ -24,6 +24,7 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<ESC>", ":noh<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -40,4 +41,3 @@ keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
-

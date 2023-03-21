@@ -4,14 +4,13 @@ if not status_ok then
 end
 
 neo_tree.setup({
-    window = {
-      mapping_options = {
-        noremap = true,
-        nowait = true,
-      },
-      mappings = {
-        ["o"] = "open",
-      }
-    },
-  }
-)
+	window = {
+		mapping_options = {
+			noremap = true,
+			nowait = true,
+		},
+		mappings = {
+			["o"] = "open",
+		},
+	},
+})
