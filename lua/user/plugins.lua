@@ -24,4 +24,6 @@ require("lazy").setup({
   },
   {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"}},
   "lewis6991/gitsigns.nvim",
+  "ggandor/leap.nvim",
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
 })
