@@ -21,5 +21,7 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
-  }
+  },
+  {"nvim-telescope/telescope.nvim", dependencies = {"nvim-lua/plenary.nvim"}},
+  "lewis6991/gitsigns.nvim",
 })
