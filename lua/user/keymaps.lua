@@ -47,3 +47,6 @@ keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
+
+-- Lsp
+keymap("n", "<leader>li", ":LspInfo<cr>", opts)

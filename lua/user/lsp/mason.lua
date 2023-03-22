@@ -1,6 +1,8 @@
 local servers = {
 	"lua_ls",
 	"rust_analyzer",
+	"pyright",
+	"jsonls",
 }
 
 require("mason").setup()
