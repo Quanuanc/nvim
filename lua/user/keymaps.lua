@@ -30,6 +30,7 @@ keymap("n", "<ESC>", ":noh<CR>", opts)
 keymap("n", "H", ":BufferPrevious<CR>", opts)
 keymap("n", "L", ":BufferNext<CR>", opts)
 keymap("n", "<leader>q", ":BufferClose<CR>", opts)
+keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
