@@ -22,6 +22,13 @@ require("lazy").setup({
 			"MunifTanjim/nui.nvim",
 		},
 	},
+	{ "windwp/nvim-autopairs" },
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
 	{
 		"kylechui/nvim-surround",
