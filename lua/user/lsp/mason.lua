@@ -3,6 +3,7 @@ local servers = {
 	"rust_analyzer",
 	"pyright",
 	"jsonls",
+	"jdtls",
 }
 
 require("mason").setup()
