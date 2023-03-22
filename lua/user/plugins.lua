@@ -50,4 +50,23 @@ require("lazy").setup({
 		dependencies = "nvim-tree/nvim-web-devicons",
 		version = "^1.0.0", -- optional: only update when a new 1.x version is released
 	},
+
+	-- cmp plugins
+	{ "hrsh7th/nvim-cmp" }, -- The completion plugin
+	{ "hrsh7th/cmp-buffer" }, -- buffer completions
+	{ "hrsh7th/cmp-path" }, -- path completions
+	{ "hrsh7th/cmp-cmdline" }, -- cmdline completions
+	{ "saadparwaiz1/cmp_luasnip" }, -- snippet completions
+	{ "hrsh7th/cmp-nvim-lsp" },
+
+	-- snippets
+	{ "L3MON4D3/LuaSnip" }, --snippet engine
+	{ "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
+
+	-- LSP
+	{ "neovim/nvim-lspconfig" },
+	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason-lspconfig.nvim" },
+	{ "jose-elias-alvarez/null-ls.nvim" },
+	{ "RRethy/vim-illuminate" },
 })
