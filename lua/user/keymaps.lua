@@ -26,6 +26,11 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<ESC>", ":noh<CR>", opts)
 
+-- Buffer barbar.nvim
+keymap("n", "H", ":BufferPrevious<CR>", opts)
+keymap("n", "L", ":BufferNext<CR>", opts)
+keymap("n", "<leader>q", ":BufferClose<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)

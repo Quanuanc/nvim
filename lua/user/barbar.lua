@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 				local width = vim.api.nvim_win_get_width(bufwinid)
 				if width ~= last_width then
-					set_offset(width, "FileTree")
+					set_offset(width, "neo-tree")
 					last_width = width
 				end
 			end,
