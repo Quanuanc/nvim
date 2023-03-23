@@ -49,5 +49,6 @@ keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
 
 -- Lsp
+keymap("n", "<leader>la", ":Lazy<cr>", opts)
 keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>ma", ":Mason<cr>", opts)

@@ -5,7 +5,7 @@ local options = {
 	fileencoding = "utf-8", -- the encoding written to a file
 	hlsearch = true, -- highlight all matches on previous search pattern
 	ignorecase = true, -- ignore case in search patterns
-	mouse = "", -- allow the mouse to be used in neovim
+	mouse = "a", -- allow the mouse to be used in neovim
 	pumheight = 10, -- pop up menu height
 	showmode = false, -- we don't need to see things like -- INSERT -- anymore
 	smartcase = true, -- smart case
@@ -31,6 +31,7 @@ local options = {
 	scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
 	sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
 	clipboard = "unnamed",
+	laststatus = 0,
 }
 
 for k, v in pairs(options) do
