@@ -29,8 +29,7 @@ keymap("n", "<ESC>", ":noh<CR>", opts)
 -- Buffer barbar.nvim
 keymap("n", "H", ":BufferPrevious<CR>", opts)
 keymap("n", "L", ":BufferNext<CR>", opts)
-keymap("n", "<leader>q", ":BufferClose<CR>", opts)
-keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<leader>w", ":BufferClose<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -52,3 +51,4 @@ keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
 keymap("n", "<leader>la", ":Lazy<cr>", opts)
 keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>ma", ":Mason<cr>", opts)
+keymap("n", "<leader>n", ":ASToggle<CR>", opts)
