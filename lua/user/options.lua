@@ -42,3 +42,14 @@ vim.opt.shortmess:append("c") -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append("-") -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove({ "c", "r", "o" }) -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- separate vim plugins from neovim in case vim still in use
+
+-- neovide settings
+if vim.g.neovide then
+  vim.g.neovide_hide_mouse_when_typing = true
+	if vim.fn.has("win32") == 1 then
+		vim.o.guifont = "JetBrainsMono NF:h11"
+		vim.g.neovide_refresh_rate = 60
+	elseif vim.fn.has("macunix") == 1 then
+		vim.o.guifont = "JetBrains Mono NL:h14"
+	end
+end
