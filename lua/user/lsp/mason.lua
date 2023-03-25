@@ -5,12 +5,18 @@ local servers = {
 	"jsonls",
 	"jdtls",
 }
+local others = {
+	"stylua",
+	"flake8",
+	"prettier",
+}
 
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
 })
+require("mason-tool-installer").setup({ ensure_installed = others })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
