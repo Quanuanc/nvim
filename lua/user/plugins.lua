@@ -52,6 +52,7 @@ require("lazy").setup({
 	},
 	{ "akinsho/toggleterm.nvim", version = "*" },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
 	{
 		"romgrk/barbar.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons",
