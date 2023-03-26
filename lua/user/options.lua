@@ -45,7 +45,7 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- separate vim plugins fr
 
 -- neovide settings
 if vim.g.neovide then
-  vim.g.neovide_hide_mouse_when_typing = true
+	vim.g.neovide_hide_mouse_when_typing = true
 	if vim.fn.has("win32") == 1 then
 		vim.o.guifont = "JetBrainsMono NF:h11"
 		vim.g.neovide_refresh_rate = 60

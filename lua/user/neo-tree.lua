@@ -13,7 +13,7 @@ neo_tree.setup({
 			["o"] = "open",
 		},
 	},
-  filesystem = {
-    use_libuv_file_watcher = true,
-  }
+	filesystem = {
+		use_libuv_file_watcher = true,
+	},
 })
