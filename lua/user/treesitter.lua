@@ -6,6 +6,7 @@ configs.setup({
 		"css",
 		"diff",
 		"java",
+		"go",
 		"javascript",
 		"html",
 		"ini",
