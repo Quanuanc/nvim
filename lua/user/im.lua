@@ -11,5 +11,7 @@ local function is_window_or_mac()
 end
 
 if is_window_or_mac() then
-	im_select.setup()
+	im_select.setup({
+		disable_auto_restore = 1,
+	})
 end
