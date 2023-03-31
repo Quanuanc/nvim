@@ -95,4 +95,5 @@ require("lazy").setup({
 			require("auto-save").setup()
 		end,
 	},
+	{ "keaising/im-select.nvim" },
 })
