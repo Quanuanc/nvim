@@ -14,6 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "briones-gabriel/darcula-solid.nvim", dependencies = { "rktjmp/lush.nvim" } },
 	{
+		"inkarkat/vim-ReplaceWithRegister",
+		event = "VeryLazy",
+	},
+	{
+		"tpope/vim-sleuth",
+		event = "VeryLazy",
+	},
+	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
 		dependencies = {
