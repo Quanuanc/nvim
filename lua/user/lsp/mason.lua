@@ -4,7 +4,7 @@ local servers = {
 	"pyright",
 	"jsonls",
 	"jdtls",
-	"beancount",
+	-- "beancount",
 }
 local others = {
 	"stylua",
