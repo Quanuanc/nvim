@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "briones-gabriel/darcula-solid.nvim", dependencies = { "rktjmp/lush.nvim" } },
+	{ "felipeagc/fleet-theme-nvim" },
 	{
 		"inkarkat/vim-ReplaceWithRegister",
 		event = "VeryLazy",
