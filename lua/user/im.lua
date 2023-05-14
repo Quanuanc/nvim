@@ -12,6 +12,6 @@ end
 
 if is_window_or_mac() then
 	im_select.setup({
-		disable_auto_restore = 1,
+		set_previous_events = {},
 	})
 end
