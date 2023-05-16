@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 neo_tree.setup({
+	enable_diagnostics = false,
 	window = {
 		mapping_options = {
 			noremap = true,

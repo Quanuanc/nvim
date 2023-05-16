@@ -24,7 +24,6 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<ESC>", ":noh<CR>", opts)
 
 -- Buffer barbar.nvim
 keymap("n", "H", ":BufferPrevious<CR>", opts)
@@ -39,6 +38,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- NeooTree
 keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
+keymap("n", "<leader>s", ":Neotree reveal<cr>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
@@ -51,4 +51,11 @@ keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
 keymap("n", "<leader>la", ":Lazy<cr>", opts)
 keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>ma", ":Mason<cr>", opts)
-keymap("n", "<leader>n", ":ASToggle<CR>", opts)
+keymap("n", "<leader>n", ":ASToggle<CR>", opts) -- auto save toggle
+
+--
+keymap("n", "<ESC>", ":noh<CR>", opts)
+keymap("i", "<C-a>", "<Home>", opts)
+keymap("i", "<C-e>", "<End>", opts)
+keymap("i", "<C-j>", "<CR>", opts)
+keymap("n", "yL", "^y$", opts)
