@@ -5,10 +5,9 @@ local options = {
 	fileencoding = "utf-8", -- the encoding written to a file
 	hlsearch = true, -- highlight all matches on previous search pattern
 	ignorecase = true, -- ignore case in search patterns
-	mouse = "", -- allow the mouse to be used in neovim
+	mouse = "a", -- allow the mouse to be used in neovim
 	pumheight = 10, -- pop up menu height
 	showmode = false, -- we don't need to see things like -- INSERT -- anymore
-	showtabline = 2, -- always show tabs
 	smartcase = true, -- smart case
 	smartindent = true, -- make indenting smarter again
 	splitbelow = true, -- force all horizontal splits to go below current window
@@ -27,20 +26,30 @@ local options = {
 	relativenumber = true, -- set relative numbered lines
 	numberwidth = 2, -- set number column width to 2 {default 4}
 	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-	wrap = true, -- display lines as one long line
+	wrap = false, -- display lines as one long line
 	linebreak = true, -- companion to wrap, don't split words
 	scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
 	sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
 	clipboard = "unnamed",
+	laststatus = 0,
 }
-
-vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
-vim.opt.iskeyword:append "-"                           -- hyphenated words recognized by searches
-vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
-vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins from neovim in case vim still in use
+vim.opt.shortmess:append("c") -- don't give |ins-completion-menu| messages
+vim.opt.iskeyword:append("-") -- hyphenated words recognized by searches
+vim.opt.formatoptions:remove({ "c", "r", "o" }) -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
+vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- separate vim plugins from neovim in case vim still in use
+
+-- neovide settings
+if vim.g.neovide then
+	vim.g.neovide_hide_mouse_when_typing = true
+	if vim.fn.has("win32") == 1 then
+		vim.o.guifont = "JetBrainsMono NF:h11"
+		vim.g.neovide_refresh_rate = 60
+	elseif vim.fn.has("macunix") == 1 then
+		vim.o.guifont = "JetBrains Mono NL:h14"
+	end
+end

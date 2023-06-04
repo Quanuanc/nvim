@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -25,14 +25,20 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Buffer barbar.nvim
+keymap("n", "H", ":BufferPrevious<CR>", opts)
+keymap("n", "L", ":BufferNext<CR>", opts)
+keymap("n", "<leader>w", ":BufferClose<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- NeooTree
+keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
+keymap("n", "<leader>s", ":Neotree reveal<cr>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
@@ -41,3 +47,15 @@ keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
 
+-- Lsp
+keymap("n", "<leader>la", ":Lazy<cr>", opts)
+keymap("n", "<leader>li", ":LspInfo<cr>", opts)
+keymap("n", "<leader>ma", ":Mason<cr>", opts)
+keymap("n", "<leader>n", ":ASToggle<CR>", opts) -- auto save toggle
+
+--
+keymap("n", "<ESC>", ":noh<CR>", opts)
+keymap("i", "<C-a>", "<Home>", opts)
+keymap("i", "<C-e>", "<End>", opts)
+keymap("i", "<C-j>", "<CR>", opts)
+keymap("n", "yL", "^y$", opts)
