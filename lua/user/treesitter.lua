@@ -14,7 +14,7 @@ configs.setup({
 		"lua",
 		"vim",
 		"sql",
-		"help",
+		"vimdoc",
 		"beancount",
 	},
 	sync_install = false,
