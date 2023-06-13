@@ -57,5 +57,4 @@ keymap("n", "<leader>n", ":ASToggle<CR>", opts) -- auto save toggle
 keymap("n", "<ESC>", ":noh<CR>", opts)
 keymap("i", "<C-a>", "<Home>", opts)
 keymap("i", "<C-e>", "<End>", opts)
-keymap("i", "<C-j>", "<CR>", opts)
 keymap("n", "yY", "^y$", opts)
