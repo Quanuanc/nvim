@@ -13,12 +13,12 @@ M.setup = function()
 	local signs = {
 		{ name = "DiagnosticSignError", text = "" },
 		{ name = "DiagnosticSignWarn", text = "" },
-		{ name = "DiagnosticSignHint", text = "" },
+		{ name = "DiagnosticSignHint", text = "󰌵" },
 		{ name = "DiagnosticSignInfo", text = "" },
 	}
 
 	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+		vim.fn.sign_define(sign.name, { texthl = "", text = sign.text })
 	end
 
 	local config = {
@@ -53,17 +53,19 @@ end
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
 	local keymap = vim.api.nvim_buf_set_keymap
+
 	keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	keymap(bufnr, "i", "<C-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	keymap(bufnr, "n", "<M-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	keymap(bufnr, "i", "<M-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	keymap(bufnr, "n", "<M-j>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+	keymap(bufnr, "i", "<M-j>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	-- keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	keymap(bufnr, "n", "<C-j>", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	keymap(bufnr, "n", "==", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 	-- keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-	-- keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
-	-- keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
+	keymap(bufnr, "n", "gn", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
+	keymap(bufnr, "n", "gN", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
 	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 	-- keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	-- keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)

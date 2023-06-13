@@ -37,7 +37,11 @@ require("lazy").setup({
 			require("Comment").setup()
 		end,
 	},
-	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "VeryLazy",
+	},
 	{
 		"kylechui/nvim-surround",
 		version = "*",
