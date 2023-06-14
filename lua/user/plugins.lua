@@ -62,9 +62,9 @@ require("lazy").setup({
 			require("leap").add_default_mappings()
 		end,
 	},
-	{ "akinsho/toggleterm.nvim", version = "*" },
+	{ "akinsho/toggleterm.nvim",         version = "*" },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
+	{ "kevinhwang91/nvim-ufo",           dependencies = { "kevinhwang91/promise-async" } },
 	{
 		"romgrk/barbar.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons",
@@ -72,15 +72,15 @@ require("lazy").setup({
 	},
 
 	-- cmp plugins
-	{ "hrsh7th/nvim-cmp" }, -- The completion plugin
+	{ "hrsh7th/nvim-cmp" },  -- The completion plugin
 	{ "hrsh7th/cmp-buffer" }, -- buffer completions
-	{ "hrsh7th/cmp-path" }, -- path completions
+	{ "hrsh7th/cmp-path" },  -- path completions
 	{ "hrsh7th/cmp-cmdline" }, -- cmdline completions
 	{ "saadparwaiz1/cmp_luasnip" }, -- snippet completions
 	{ "hrsh7th/cmp-nvim-lsp" },
 
 	-- snippets
-	{ "L3MON4D3/LuaSnip" }, --snippet engine
+	{ "L3MON4D3/LuaSnip" },      --snippet engine
 	{ "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
 
 	-- LSP
@@ -108,4 +108,25 @@ require("lazy").setup({
 		end,
 	},
 	{ "keaising/im-select.nvim" },
+	{
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v2.x',
+		dependencies = {
+			-- LSP Support
+			{ 'neovim/nvim-lspconfig' }, -- Required
+			{
+				-- Optional
+				'williamboman/mason.nvim',
+				build = function()
+					pcall(vim.cmd, 'MasonUpdate')
+				end,
+			},
+			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+
+			-- Autocompletion
+			{ 'hrsh7th/nvim-cmp' }, -- Required
+			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
+			{ 'L3MON4D3/LuaSnip' }, -- Required
+		}
+	},
 })
