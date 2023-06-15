@@ -1,29 +1,16 @@
-vim.api.nvim_create_autocmd("FileType", {
-	callback = function(tbl)
-		local set_offset = require("bufferline.api").set_offset
+local status_ok, bar = pcall(require, "barbar")
+if not status_ok then
+  return
+end
 
-		local bufwinid
-		local last_width
-		local autocmd = vim.api.nvim_create_autocmd("WinScrolled", {
-			callback = function()
-				bufwinid = bufwinid or vim.fn.bufwinid(tbl.buf)
+vim.g.barbar_auto_setup = false
 
-				local width = vim.api.nvim_win_get_width(bufwinid)
-				if width ~= last_width then
-					set_offset(width, "neo-tree")
-					last_width = width
-				end
-			end,
-		})
-
-		vim.api.nvim_create_autocmd("BufWipeout", {
-			buffer = tbl.buf,
-			callback = function()
-				vim.api.nvim_del_autocmd(autocmd)
-				set_offset(0)
-			end,
-			once = true,
-		})
-	end,
-	pattern = "neo-tree", -- or any other filetree's `ft`
+bar.setup({
+  animation = false,
+  icons = {
+    button = "",
+  },
+  sidebar_filetypes = {
+    ["neo-tree"] = { event = "BufWipeout" },
+  },
 })
