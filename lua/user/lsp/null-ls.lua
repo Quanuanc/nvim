@@ -3,8 +3,13 @@ if not status_ok then
   return
 end
 
+local formatting = null_ls.builtins.formatting
+
 null_ls.setup({
   sources = {
-    null_ls.builtins.formatting.stylua,
+    formatting.stylua,
+    formatting.black,
+    formatting.prettier,
   },
+  debug = false,
 })

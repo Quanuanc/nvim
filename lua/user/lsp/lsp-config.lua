@@ -24,13 +24,13 @@ zero_preset.on_attach(function(client, bufnr)
   end
 end)
 
-zero_preset.ensure_installed({
-  "lua_ls",
-  "jsonls",
-  "rust_analyzer",
-  "pyright",
-  "jdtls",
-})
+-- zero_preset.ensure_installed({
+--   "lua_ls",
+--   "jsonls",
+--   "rust_analyzer",
+--   "pyright",
+--   "jdtls",
+-- })
 
 -- (Optional) Configure lua language server for neovim
 local lsp_ok, lspconfig = pcall(require, "lspconfig")
