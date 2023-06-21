@@ -9,7 +9,9 @@ null_ls.setup({
   sources = {
     formatting.stylua,
     formatting.black,
-    formatting.prettier,
+    formatting.prettierd,
+    formatting.sqlfmt,
+    formatting.beautysh,
   },
   debug = false,
 })

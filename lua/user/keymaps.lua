@@ -47,6 +47,7 @@ keymap("n", "<M-e>", ":Telescope buffers<cr>", opts)
 
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
+keymap("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)
 keymap("n", "gm", ":Gitsigns next_hunk<cr>", opts)
 keymap("n", "gM", ":Gitsigns prev_hunk<cr>", opts)
 
