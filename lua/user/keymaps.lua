@@ -43,9 +43,12 @@ keymap("n", "<leader>s", ":Neotree reveal<cr>", opts)
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", opts)
 keymap("n", "<leader>fw", ":Telescope live_grep<cr>", opts)
+keymap("n", "<M-e>", ":Telescope buffers<cr>", opts)
 
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
+keymap("n", "gm", ":Gitsigns next_hunk<cr>", opts)
+keymap("n", "gM", ":Gitsigns prev_hunk<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>la", ":Lazy<cr>", opts)
