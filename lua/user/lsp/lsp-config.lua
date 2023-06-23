@@ -18,6 +18,7 @@ zero_preset.on_attach(function(client, bufnr)
   vim.keymap.set({ "n", "i" }, "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<cr>", { buffer = true })
   vim.keymap.set({ "n" }, "gn", "<cmd>lua vim.diagnostic.goto_next()<cr>", { buffer = true })
   vim.keymap.set({ "n" }, "gN", "<cmd>lua vim.diagnostic.goto_prev()<cr>", { buffer = true })
+  vim.keymap.set({ "n" }, "gR", "<cmd>lua vim.lsp.buf.references()<cr>", { buffer = true })
 
   if client.name == "lua_ls" then
     client.server_capabilities.documentFormattingProvider = false
