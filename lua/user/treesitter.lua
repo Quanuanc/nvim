@@ -16,6 +16,7 @@ configs.setup({
     "sql",
     "vimdoc",
     "beancount",
+    "kotlin",
   },
   sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
