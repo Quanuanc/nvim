@@ -9,9 +9,10 @@ null_ls.setup({
   sources = {
     formatting.stylua,
     formatting.black,
-    formatting.prettierd,
+    formatting.prettierd.with({ disabled_filetypes = { "yaml" } }),
     formatting.sqlfmt,
     formatting.beautysh,
+    formatting.yamlfmt,
   },
   debug = false,
 })
