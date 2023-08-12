@@ -48,8 +48,8 @@ keymap("n", "<M-e>", ":Telescope buffers<cr>", opts)
 -- Git
 keymap("n", "<leader>ga", ":Gitsigns blame_line<cr>", opts)
 keymap("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)
-keymap("n", "gm", ":Gitsigns next_hunk<cr>", opts)
-keymap("n", "gM", ":Gitsigns prev_hunk<cr>", opts)
+keymap("n", "]g", ":Gitsigns next_hunk<cr>", opts)
+keymap("n", "[g", ":Gitsigns prev_hunk<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>la", ":Lazy<cr>", opts)

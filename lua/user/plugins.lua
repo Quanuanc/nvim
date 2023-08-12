@@ -57,10 +57,25 @@ require("lazy").setup({
     end,
   },
   {
-    "ggandor/leap.nvim",
-    config = function()
-      require("leap").add_default_mappings()
-    end,
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {
+      modes = {
+        char = {
+          enabled = false,
+        },
+      },
+    },
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
+    },
   },
   { "akinsho/toggleterm.nvim", version = "*" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
