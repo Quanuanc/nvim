@@ -26,8 +26,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Buffer barbar.nvim
-keymap("n", "H", ":BufferPrevious<CR>", opts)
-keymap("n", "L", ":BufferNext<CR>", opts)
+keymap("n", "<C-S-h>", ":BufferPrevious<CR>", opts)
+keymap("n", "<C-S-l>", ":BufferNext<CR>", opts)
 keymap("n", "<leader>w", ":BufferClose<CR>", opts)
 
 -- Resize with arrows
