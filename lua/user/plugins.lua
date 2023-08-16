@@ -106,8 +106,8 @@ require("lazy").setup({
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
   { "WhoIsSethDaniel/mason-tool-installer.nvim" },
-  { "jose-elias-alvarez/null-ls.nvim" },
   { "RRethy/vim-illuminate" },
+  { "nvimdev/guard.nvim" },
 
   {
     "ethanholz/nvim-lastplace",
