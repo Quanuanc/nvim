@@ -5,7 +5,7 @@ end
 
 local zero_preset = zero.preset({})
 
-zero_preset.on_attach(function(client, bufnr)
+zero_preset.on_attach(function(_, bufnr)
   zero_preset.default_keymaps({
     buffer = bufnr,
     omit = { "gr", "K", "<F2>", "<F3>", "<F4>" },
@@ -14,13 +14,12 @@ zero_preset.on_attach(function(client, bufnr)
   vim.keymap.set({ "n", "i" }, "<M-j>", "<cmd>lua vim.diagnostic.open_float()<cr>", { buffer = true })
   vim.keymap.set({ "n", "i" }, "<M-k>", "<cmd>lua vim.lsp.buf.hover()<cr>", { buffer = true })
   vim.keymap.set({ "n" }, "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", { buffer = true })
-  vim.keymap.set({ "n", "x" }, "==", ":GuardFmt<cr>", { buffer = true })
   vim.keymap.set({ "n", "i" }, "<M-CR>", "<cmd>lua vim.lsp.buf.code_action()<cr>", { buffer = true })
   vim.keymap.set({ "n" }, "gR", "<cmd>lua vim.lsp.buf.references()<cr>", { buffer = true })
 
-  if client.name == "lua_ls" then
-    client.server_capabilities.documentFormattingProvider = false
-  end
+  -- if client.name == "lua_ls" then
+  --   client.server_capabilities.documentFormattingProvider = false
+  -- end
 end)
 
 -- zero_preset.ensure_installed({

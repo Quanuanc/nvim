@@ -56,6 +56,7 @@ keymap("n", "<leader>la", ":Lazy<cr>", opts)
 keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>ma", ":Mason<cr>", opts)
 keymap("n", "<leader>n", ":ASToggle<CR>", opts) -- auto save toggle
+keymap("n", "==", ":GuardFmt<cr>", opts)
 
 --
 keymap("n", "<ESC>", ":noh<CR>", opts)

@@ -6,8 +6,9 @@ end
 local ft = require("guard.filetype")
 
 ft("lua"):fmt("stylua")
+ft("c"):fmt("clang-format")
 
 guard.setup({
-  fmt_on_save = true,
+  fmt_on_save = false,
   lsp_as_default_formatter = true,
 })
