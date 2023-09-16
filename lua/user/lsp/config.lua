@@ -3,8 +3,18 @@ if not status_ok then
   return
 end
 
-local zero_preset = zero.preset({})
+-- diagnostic sign
+local signs = {
+  { name = "DiagnosticSignError", text = " " },
+  { name = "DiagnosticSignWarn", text = " " },
+  { name = "DiagnosticSignHint", text = " " },
+  { name = "DiagnosticSignInfo", text = " " },
+}
+for _, sign in ipairs(signs) do
+  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+end
 
+local zero_preset = zero.preset({})
 zero_preset.on_attach(function(_, bufnr)
   zero_preset.default_keymaps({
     buffer = bufnr,
