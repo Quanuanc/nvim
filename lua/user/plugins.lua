@@ -12,7 +12,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { "felipeagc/fleet-theme-nvim" },
+  -- colorscheme
+  {
+    "ribru17/bamboo.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("bamboo").setup({
+        -- optional configuration here
+      })
+      require("bamboo").load()
+    end,
+  },
   {
     "inkarkat/vim-ReplaceWithRegister",
     event = "VeryLazy",
@@ -107,8 +118,12 @@ require("lazy").setup({
   { "williamboman/mason-lspconfig.nvim" },
   { "WhoIsSethDaniel/mason-tool-installer.nvim" },
   { "RRethy/vim-illuminate" },
-  { "nvimdev/guard.nvim" },
-
+  {
+    "nvimdev/guard.nvim",
+    dependencies = {
+      "nvimdev/guard-collection",
+    },
+  },
   {
     "ethanholz/nvim-lastplace",
     config = function()
