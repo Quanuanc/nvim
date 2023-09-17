@@ -63,3 +63,6 @@ keymap("n", "<ESC>", ":noh<CR>", opts)
 keymap("i", "<C-a>", "<Home>", opts)
 keymap("i", "<C-e>", "<End>", opts)
 keymap("n", "yY", "^y$", opts)
+
+-- edit
+keymap("n", "cx", "<cmd>lua require('substitute.exchange').operator()<CR>", opts)

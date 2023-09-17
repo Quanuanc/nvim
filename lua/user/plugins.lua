@@ -29,6 +29,12 @@ require("lazy").setup({
     event = "VeryLazy",
   },
   {
+    "gbprod/substitute.nvim",
+    config = function()
+      require("substitute").setup()
+    end,
+  },
+  {
     "tpope/vim-sleuth",
     event = "VeryLazy",
   },
@@ -145,10 +151,8 @@ require("lazy").setup({
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
     dependencies = {
-      -- LSP Support
       { "neovim/nvim-lspconfig" }, -- Required
       {
-        -- Optional
         "williamboman/mason.nvim",
         build = function()
           pcall(vim.cmd, "MasonUpdate")
