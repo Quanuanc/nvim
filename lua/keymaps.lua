@@ -52,8 +52,6 @@ keymap("n", "]g", ":Gitsigns next_hunk<cr>", opts)
 keymap("n", "[g", ":Gitsigns prev_hunk<cr>", opts)
 
 -- Lsp
-keymap("n", "<leader>la", ":Lazy<cr>", opts)
-keymap("n", "<leader>li", ":LspInfo<cr>", opts)
 keymap("n", "<leader>ma", ":Mason<cr>", opts)
 keymap("n", "<leader>n", ":ASToggle<CR>", opts) -- auto save toggle
 keymap("n", "==", ":GuardFmt<cr>", opts)
@@ -66,3 +64,5 @@ keymap("n", "yY", "^y$", opts)
 
 -- edit
 keymap("n", "cx", "<cmd>lua require('substitute.exchange').operator()<CR>", opts)
+keymap("n", "cxx", "<cmd>lua require('substitute.exchange').line()<CR>", opts)
+keymap("v", "cx", "<cmd>lua require('substitute.exchange').visual()<CR>", opts)

@@ -1,14 +1,19 @@
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
-  return
-end
+local M = {
+  "nvim-telescope/telescope.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  event = "VeryLazy",
+}
 
-telescope.setup({
-  defaults = {
-    layout_config = {
-      horizontal = {
-        preview_width = 0.6,
+function M.config()
+  require("telescope").setup({
+    defaults = {
+      layout_config = {
+        horizontal = {
+          preview_width = 0.6,
+        },
       },
     },
-  },
-})
+  })
+end
+
+return M
