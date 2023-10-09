@@ -4,6 +4,7 @@ local opts = { noremap = true, silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
+local nkeymap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -66,3 +67,6 @@ keymap("n", "yY", "^y$", opts)
 keymap("n", "cx", "<cmd>lua require('substitute.exchange').operator()<CR>", opts)
 keymap("n", "cxx", "<cmd>lua require('substitute.exchange').line()<CR>", opts)
 keymap("v", "cx", "<cmd>lua require('substitute.exchange').visual()<CR>", opts)
+
+-- terminal
+nkeymap("t", "<ESC>", [[<C-\><C-n>]], opts)
