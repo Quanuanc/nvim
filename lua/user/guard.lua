@@ -11,7 +11,7 @@ function M.config()
 
   ft("lua"):fmt("stylua")
   ft("c"):fmt("clang-format")
-  ft("html,javascript,json"):fmt("prettier")
+  ft("html,javascript,json,yaml"):fmt("prettier")
 
   require("guard").setup({
     fmt_on_save = false,
