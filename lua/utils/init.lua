@@ -5,6 +5,7 @@ M.servers = {
   "pyright",
   "rust_analyzer",
   "beancount",
+  "tsserver",
 }
 
 return M
