@@ -6,6 +6,7 @@ M.servers = {
   "rust_analyzer",
   "beancount",
   "tsserver",
+  "jsonls",
 }
 
 return M
