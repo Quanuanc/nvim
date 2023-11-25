@@ -23,6 +23,7 @@ function M.config()
       "vimdoc",
       "beancount",
       "kotlin",
+      "nix",
     },
     sync_install = false,
     ignore_install = { "" }, -- List of parsers to ignore installing
