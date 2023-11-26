@@ -7,6 +7,7 @@ M.servers = {
   "beancount",
   "tsserver",
   "jsonls",
+  "clangd",
 }
 
 return M
